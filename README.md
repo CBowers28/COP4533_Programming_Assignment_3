@@ -1,7 +1,16 @@
 # COP4533_Programming_Assignment_3
 
+## Instructions to Run
 
+Run this command from the repository root to run the algorithm:
+```
+python ./src/main.py
+```
 
+To test with example data, run this command:
+```
+cat data/ex1.in | python ./src/main.py
+```
 
 
 ## Question 2: Recurrence Equation
