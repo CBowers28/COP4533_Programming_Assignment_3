@@ -18,11 +18,12 @@ cat data/ex1.in | python ./src/main.py
 OPT(i, j) represents the maximum value of a common subsequence of the first i 
 characters of A and the first j characters of B, where v(c) represents value of a given character c.
 
-OPT(i, j) = 0                                                       if i = 0 or j = 0 
 
-OPT(i, j) = max(OPT(i-1,j-1) + v(A[i]), OPT(i-1,j), OPT(i,j-1))  if A[i] = B[j] 
+OPT(i, j) = 0 <span style="float:right;">if i = 0 or j = 0</span>
 
-OPT(i, j) = max(OPT(i-1,j), OPT(i,j-1))                           if A[i] ≠ B[j]
+OPT(i, j) = max(OPT(i-1,j-1) + v(A[i]), OPT(i-1,j), OPT(i,j-1)) <span style="float:right;">if A[i] = B[j]</span>
+
+OPT(i, j) = max(OPT(i-1,j), OPT(i,j-1)) <span style="float:right;">if A[i] ≠ B[j]</span>
 
 The answer is OPT(m, n) where m and n are the lengths of A and B respectively.
 
