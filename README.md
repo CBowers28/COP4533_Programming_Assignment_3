@@ -1,5 +1,13 @@
 # COP4533_Programming_Assignment_3
 
+Christopher Bowers
+
+UFID: 19272960
+
+Dylan Esperto
+
+UFID: 53118184
+
 ## Instructions to Run
 
 Run this command from the repository root to run the algorithm:
