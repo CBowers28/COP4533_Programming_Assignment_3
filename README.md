@@ -51,3 +51,22 @@ zero-value match adds nothing and should be skipped.
 
 **No match case:** When A[i] ≠ B[j] we cannot take both characters, so we take 
 the best of skipping i in A or skipping j in B.
+
+# Question 3: Big O
+
+```
+A = a_1 ... a_m
+B = b_1 b_2 ... b_n
+v(i) = value of character i
+Calc-OPT:
+    M = 2d array of size n x m initialized to zeros
+    for i = 1 to m + 1
+        for j = 1 to n + 1
+            if a_(i-1) == b_(j-1)
+                M[i][j] = M[i-1][j-1] + v(a_(i-1))
+            else
+                M[i][j] = max(M[i-1][j], M[i][j-1])
+    return M[m][n]
+```
+
+The algorithm is O(mn).
