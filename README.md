@@ -12,6 +12,11 @@ To test with example data, run this command:
 cat data/ex1.in | python ./src/main.py
 ```
 
+## Question 1: Runtime Graph
+
+As the size of both input strings grow, a clear polynomial runtime pattern shows for larger n. 
+
+![Runtime graph](img/graph.png "Runtime graph")
 
 ## Question 2: Recurrence Equation
 

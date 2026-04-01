@@ -10,10 +10,10 @@ def parse_input():
     str1 = input()
     str2 = input()
 
-    return (n, values, str1, str2)
+    return (values, str1, str2)
 
 
-def opt(n, values, str1, str2):
+def opt(values, str1, str2):
     #we are going to use a 2D array and the general format of find longest subsequence to track the total weight of a subsequence
     #OPT = {
     m = len(str1)
@@ -30,7 +30,7 @@ def opt(n, values, str1, str2):
     return arr
 
 #backtracking
-def backtrack(n, values, str1, str2, arr):
+def backtrack(values, str1, str2, arr):
     m = len(str1)
     n = len(str2)
     cur_max_v = arr[m][n]
@@ -46,8 +46,11 @@ def print_output(n, sol):
     print(n)
     print(sol)
 
-if __name__ == '__main__':
-    input_tuple = parse_input()
+def main(input_tuple):
     arr = opt(*input_tuple)
     result = backtrack(*input_tuple, arr)
     print_output(*result)
+
+if __name__ == '__main__':
+    input_tuple = parse_input()
+    main(input_tuple)
