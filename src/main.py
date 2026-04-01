@@ -27,12 +27,27 @@ def opt(n, values, str1, str2):
             else:
                 arr[i][j] = max(arr[i-1][j], arr[i][j-1])
 
-    print(arr)
-
+    return arr
 
 #backtracking
+def backtrack(n, values, str1, str2, arr):
+    m = len(str1)
+    n = len(str2)
+    cur_max_v = arr[m][n]
+    sol = ""
+    for i in range(m, 1, -1):
+        for j in range(n, 1, -1):
+            if arr[i-1][j-1] + values[str1[i-1]] == cur_max_v:
+                sol = str1[i-1] + sol
+                cur_max_v -= values[str1[i-1]]
+    return (arr[m][n], sol)
 
+def print_output(n, sol):
+    print(n)
+    print(sol)
 
 if __name__ == '__main__':
     input_tuple = parse_input()
-    opt(*input_tuple)
+    arr = opt(*input_tuple)
+    result = backtrack(*input_tuple, arr)
+    print_output(*result)
