@@ -15,10 +15,11 @@ Run this command from the repository root to run the algorithm:
 python ./src/main.py
 ```
 
-To test with example data, run this command:
+To test with example data `ex1.in`, run this command:
 ```
 cat data/ex1.in | python ./src/main.py
 ```
+This command should reproduce the output in `data/ex1.out`.
 
 ## Question 1: Runtime Graph
 
